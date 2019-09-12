@@ -6,4 +6,8 @@ class WcaLinkController < ActionController::BaseActionController::Base
     logger.info @request
     render :text => @request.path
   end
+
+  def test
+    logger.info "test""
+  end
 end
