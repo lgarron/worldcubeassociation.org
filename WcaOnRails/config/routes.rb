@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   constraints host: 'wca.link' do
-    get to: 'wca_link#redirect', as: :wca_link
+    get '/' => 'wca_link#redirect', as: :wca_link
   end
 
   # Prevent account deletion.
