@@ -4,7 +4,7 @@ class WcaLinkController < ActionController::BaseActionController::Base
   def redirect
     logger.info @request.path
     logger.info @request
-    render :text => @request.path
+    render :plain => @request.path
   end
 
   def test
