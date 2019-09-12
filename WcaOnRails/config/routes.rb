@@ -5,6 +5,10 @@ Rails.application.routes.draw do
     controllers applications: 'oauth/applications'
   end
 
+  constraints host: 'wca.link' do
+    root to: 'wca_link#redirect', as: :wca_link
+  end
+
   # Prevent account deletion.
   #  https://github.com/plataformatec/devise/wiki/How-To:-Disable-user-from-destroying-their-account
   devise_for :users, skip: :registrations
