@@ -85,6 +85,7 @@ en:
     magic: "Magic"
     mmagic: "Master Magic"
     333mbo: "3x3x3 Multi-Blind Old Style"
+    "unofficial-333ft": "3x3x3 with Feet (Unofficial)"
   #context: Formats name
   formats:
     "1": "Best of 1"

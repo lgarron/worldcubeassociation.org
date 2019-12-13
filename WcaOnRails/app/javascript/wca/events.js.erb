@@ -3,6 +3,7 @@ import formats from 'wca/formats.js.erb';
 
 export default {
   official: <%= Event.official.to_json.html_safe %>.map(extend),
+  unofficial: <%= Event.unofficial.to_json.html_safe %>.map(extend),
   byId: _.mapValues(<%= Event.all.index_by(&:id).to_json.html_safe %>, extend),
 };
 

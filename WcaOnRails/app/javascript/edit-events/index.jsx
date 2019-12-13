@@ -13,7 +13,9 @@ export function rootRender() {
 }
 
 function normalizeWcifEvents(wcifEvents) {
-  return events.official.map(event => {
+  // TODO: Split up official vs. unofficial event sections
+  console.log(events);
+  return events.official.concat(events.unofficial).map(event => {
     return _.find(wcifEvents, { id: event.id }) || { id: event.id, rounds: null };
   });
 }

@@ -32,6 +32,7 @@ class Event < ApplicationRecord
   # Therefore we need to quote it in the query.
   scope :official, -> { where("`rank` < 990") }
   scope :deprecated, -> { where("`rank` between 990 and 999") }
+  scope :unofficial, -> { where("1000 <= `rank`") }
 
   def recommended_format
     formats.recommended.first
@@ -43,6 +44,10 @@ class Event < ApplicationRecord
 
   def deprecated?
     990 <= rank && rank < 1000
+  end
+
+  def unofficial?
+    1000 <= rank
   end
 
   # See https://www.worldcubeassociation.org/regulations/#9f12
