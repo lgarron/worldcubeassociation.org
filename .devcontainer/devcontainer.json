@@ -41,7 +41,8 @@
 	},
 	"otherPortsAttributes": {
 		"onAutoForward": "ignore"
-	}
+	},
+	"updateContentCommand": "docker-compose up -- detach && docker exec -it rails bash -c \"bin/rake db:load:development\" # TODO: We probably need to delay the dev DB population until the container is sufficiently up?"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
