@@ -28,6 +28,19 @@
 		"ghcr.io/devcontainers/features/ruby:1": {
 			"version": "latest"
 		}
+	},
+	"forwardPorts": [
+		3000
+	],
+	"portsAttributes": {
+		"3000": {
+			"label": "WCA website",
+			"onAutoForward": "openBrowserOnce",
+			"requireLocalPort": false
+		}
+	},
+	"otherPortsAttributes": {
+		"onAutoForward": "ignore"
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
